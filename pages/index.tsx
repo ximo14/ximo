@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
 import Hero from '../components/Hero/Hero';
+import Experience from '../components/Experience/Experience';
 
 const Home: NextPage = () => {
 	return (
@@ -13,9 +14,17 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<main className='h-screen w-full px-10 py-5 bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors ease-in-out delay-200'>
+			<main className='h-full w-full px-10 py-5 bg-white text-black dark:bg-zinc-900 dark:text-white transition-colors ease-in-out delay-200'>
 				<Nav />
+				<div className='flex flex-col justify-center px-8'>
+            <div className='flex flex-col justify-between w-full relative max-w-2xl mx-auto pt-8 pb-8 sm:pb-16 bg-opacity-60 space-y-20'>
 				<Hero />
+				<div className=''>
+					<h2 className='text-3xl mb-5 font-semibold'>Experience</h2>
+					<Experience />
+				</div>
+				</div>
+				</div>
 			</main>
 			<Footer />
 		</div>

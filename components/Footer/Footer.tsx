@@ -6,7 +6,7 @@ const Footer = () => {
             <div className='flex justify-around sm:justify-center items-center'>
                 <div>
                     <span>
-                        Made with ❤️ · <a className='font-mono underline cursor-pointer'>source code</a>
+                        Made with ❤️ · <a className='font-mono underline cursor-pointer'>source</a>
                     </span>
                 </div>
                 <div className='visible sm:invisible'>
