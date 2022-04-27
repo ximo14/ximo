@@ -1,4 +1,4 @@
-import { GitHub, Linkedin, Mail, Twitter } from 'react-feather';
+import { FiMail, FiLinkedin, FiGithub, FiTwitter } from 'react-icons/fi';
 
 const Hero = () => {
     return(
@@ -15,17 +15,17 @@ const Hero = () => {
                         resume</button>
                 </a>
                 <div className='flex space-x-5'>
-                    <a href="mailto:ximo.gil14@gmail.com">
-                        <Mail className='transform hover:scale-[1.2] transition-all' size={28} />
+                    <a href='mailto:ximo.gil14@gmail.com'>
+                        <FiMail className='transform hover:scale-[1.2] transition-all' size={28} />
                     </a>
-                    <a href="https://www.linkedin.com/in/joaquingilchanza/" target="_blank" rel="noreferrer">
-                        <Linkedin className='text-[#0e76a8] transform hover:scale-[1.2] transition-all' size={28} />
+                    <a href='https://www.linkedin.com/in/joaquingilchanza/' target='_blank' rel='noreferrer'>
+                        <FiLinkedin className='text-[#0e76a8] transform hover:scale-[1.2] transition-all' size={28} />
                     </a>
-                    <a href="https://github.com/ximo14" target="_blank" rel="noreferrer">
-                        <GitHub className='text-gray-400 transform hover:scale-[1.2] transition-all' size={28} />
+                    <a href='https://github.com/ximo14' target='_blank' rel='noreferrer'>
+                        <FiGithub className='text-gray-400 transform hover:scale-[1.2] transition-all' size={28} />
                     </a>
-                    <a href="https://twitter.com/ximo_dev" target="_blank" rel="noreferrer">
-                        <Twitter className='text-[#1DA1F2] transform hover:scale-[1.2] transition-all' size={28} />
+                    <a href='https://twitter.com/ximo_dev' target='_blank' rel='noreferrer'>
+                        <FiTwitter className='text-[#1DA1F2] transform hover:scale-[1.2] transition-all' size={28} />
                     </a>
                 </div>
             </div>
