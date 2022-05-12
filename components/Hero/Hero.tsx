@@ -1,13 +1,17 @@
 import { FiMail, FiLinkedin, FiGithub, FiTwitter } from 'react-icons/fi';
+import Image from 'next/image'
 
 const Hero = () => {
     return(
         <div className='flex justify-between'>
             <div>
                 <h1 className='text-6xl font-bold mb-1'>Ximo Gil</h1>
-                <h2 className='text-xl font-semibold mb-10'>
+                <h2 className='text-xl font-semibold'>
                     Software Developer at <a href='https://widitrade.com/' target='_blank' rel='noreferrer'
                         className='text-[#22a2a2] font-semibold underline transform hover:text-teal-700 transition-all'>Widitrade</a>
+                </h2>
+                <h2 className='text-md font-normal mb-8'>
+                    Currently based in <span className='font-semibold'>València, Spain</span>📍
                 </h2>
                 <a href='ximo-resume.pdf' target='_blank' rel='noopener noreferrer'>
                     <button
@@ -30,7 +34,7 @@ const Hero = () => {
                 </div>
             </div>
             <div>
-                {/* TODO: add image */}
+                <Image src="/memoji1.png" alt="me" width="220" height="220" />
             </div>
         </div>
     )

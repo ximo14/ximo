@@ -1,4 +1,22 @@
-import { SiPhp, SiVuedotjs, SiSymfony, SiLaravel, SiSass, SiBootstrap, SiTailwindcss, SiPostgresql, SiMongodb, SiRabbitmq, SiCsharp, SiDotnet, SiMysql, SiNextdotjs, SiReact, SiTypescript, SiJavascript } from "react-icons/si";
+import {
+    SiPhp,
+    SiVuedotjs,
+    SiSymfony,
+    SiLaravel,
+    SiSass,
+    SiBootstrap,
+    SiTailwindcss,
+    SiPostgresql,
+    SiMongodb,
+    SiRabbitmq,
+    SiCsharp,
+    SiDotnet,
+    SiMysql,
+    SiNextdotjs,
+    SiReact,
+    SiTypescript,
+    SiJavascript
+} from "react-icons/si";
 
 
 const Technologies = () => {
