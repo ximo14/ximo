@@ -33,8 +33,8 @@ const Hero = () => {
                     </a>
                 </div>
             </div>
-            <div>
-                <Image src="/memoji1.png" alt="me" width="220" height="220" />
+            <div id='image'>
+                <Image src="/memoji1.png" alt="me" width="220" height="220" className='w-1/2'/>
             </div>
         </div>
     )

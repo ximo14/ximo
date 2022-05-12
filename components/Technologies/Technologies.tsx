@@ -24,7 +24,7 @@ const Technologies = () => {
         <div>
             <h2 className='text-3xl mb-2 font-semibold'>Technologies</h2>
             <h4 className='text-md mb-2 text-base font-normal text-gray-500 dark:text-gray-400'>
-                Throughout my career, I used a lot of different technologies but I love to learn new ones in my free time.
+                Throughout my career, I used a lot of different technologies and I love to learn new ones in my free time.
             </h4>
             <h4 className='text-md mb-3 text-base font-normal text-gray-500 dark:text-gray-400'>Current stack:</h4>
             <div className='grid grid-cols-3 md:grid-cols-4 gap-6 mb-10'>
