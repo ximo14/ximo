@@ -6,7 +6,7 @@ const Footer = () => {
             <div className='flex justify-around sm:justify-center items-center'>
                 <div>
                     <span>
-                        Made with ❤️ · <a className='font-mono underline cursor-pointer'>source</a>
+                        Made with ❤️ · <a href='https://github.com/ximo14/ximo' target='_blank' rel='noreferrer' className='font-mono underline cursor-pointer'>source</a>
                     </span>
                 </div>
                 <div className='visible sm:invisible'>
