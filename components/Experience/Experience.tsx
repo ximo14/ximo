@@ -35,7 +35,6 @@ const experiences = [
     
 ]
 
-
 const Experience = () => {
     return (
         <div>
