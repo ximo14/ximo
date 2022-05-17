@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 const Hero = () => {
     return(
-        <div className='flex flex-col-reverse  sm:flex-row items-start'>
-            <div className='flex flex-col px-0'>
+        <div className='flex flex-col-reverse justify-between lg:flex-row items-start'>
+            <div className='flex flex-col px-0 pt-5'>
                 <h1 className='text-6xl font-bold mb-1'>Ximo Gil</h1>
                 <h2 className='text-lg lg:text-xl font-semibold'>
                     Software Developer at <a href='https://widitrade.com/' target='_blank' rel='noreferrer' className='text-[#22a2a2] font-semibold underline transform hover:text-teal-700 transition-all'>Widitrade</a>
