@@ -11,7 +11,7 @@ const Experience : React.FC<experienceProps> = ({ experiences }: experienceProps
             <ol className='relative border-l border-gray-400 dark:border-gray-700'>
                 {experiences.map((experience: ExperienceType) => {
                     return (
-                        <li className='mb-10 ml-4' key={experience.companyName}>
+                        <li className='mb-10 ml-4' key={experience.id}>
                             <div
                                 className='absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'>
                             </div>
