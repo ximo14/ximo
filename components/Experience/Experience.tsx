@@ -14,16 +14,16 @@ const Experience = () => {
     const [experiences, setExperiences] = useState<Experience[]>([])
 
     useEffect(() => {
-      const fetchData = async () => {
-        let { data: experiences, error } = await supabase
-            .from('experiences')
-            .select('*')
-            .order('created_at', { ascending: false })
+    //   const fetchData = async () => {
+    //     let { data: experiences, error } = await supabase
+    //         .from('experiences')
+    //         .select('*')
+    //         .order('created_at', { ascending: false })
 
-        setExperiences(experiences!);
-      }
+    //     setExperiences(experiences!);
+    //   }
 
-      fetchData();
+      //fetchData();
     }, )
 
     return (
