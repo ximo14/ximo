@@ -1,46 +1,36 @@
-const experiences = [
-    {
-        'companyName': 'Widitrade',
-        'date': 'November 2021 - Present',
-        'position': 'Software Developer',
-        'description': 'Widitrade is a platform that automates visibility and scalability with 100% original content',
-        'companyUrl': 'https://widitrade.com/',
-        'moreInfoActive': false
-    },
-    {
-        'companyName': 'Sopra Steria',
-        'date': 'November 2020 - November 2021',
-        'position': 'Software Developer',
-        'description': 'Sopra Steria is a consulting, digital services, and software development company.',
-        'companyUrl': 'https://www.soprasteria.com/',
-        'moreInfoActive': false
-    },
-    {
-        'companyName': 'Friendly Rentals',
-        'date': 'March 2018 - November 2020',
-        'position': 'Software Developer',
-        'description': 'Friendly Rentals is the leading company in tourism apartments at Barcelona, which have multiple locations around the world.',
-        'companyUrl': 'https://www.friendlyrentals.com/',
-        'moreInfoActive': false
-    },
-    {
-        'companyName': 'Linkener',
-        'date': 'July 2017 - February 2018',
-        'position': 'Intern Developer',
-        'description': 'Linkener is an energetic efficiency start-up that provides software and hardware to improve your electrical consumption.',
-        'companyUrl': 'https://www.linkener.com/',
-        'moreInfoActive': false
-    },
+import { useEffect, useState } from "react";
+import { supabase } from '../../utils/supabaseClient';
 
-    
-]
+type Experience = {
+    companyName: string,
+    description: string,
+    position: string,
+    date: string,
+    companyUrl: string,
+    moreInfoActive: boolean
+}
 
 const Experience = () => {
+    const [experiences, setExperiences] = useState<Experience[]>([])
+
+    useEffect(() => {
+      const fetchData = async () => {
+        let { data: experiences, error } = await supabase
+            .from('experiences')
+            .select('*')
+            .order('created_at', { ascending: false })
+
+        setExperiences(experiences!);
+      }
+
+      fetchData();
+    }, )
+
     return (
         <div>
             <h2 className='text-3xl mb-5 font-semibold'>Experience</h2>
             <ol className='relative border-l border-gray-400 dark:border-gray-700'>
-                {experiences.map(experience => {
+                {experiences.map((experience: Experience) => {
                     return (
                         <li className='mb-10 ml-4' key={experience.companyName}>
                             <div
