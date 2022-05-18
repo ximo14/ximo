@@ -13,19 +13,7 @@ type Experience = {
 const Experience = () => {
     const [experiences, setExperiences] = useState<Experience[]>([])
 
-    useEffect(() => {
-    //   const fetchData = async () => {
-    //     let { data: experiences, error } = await supabase
-    //         .from('experiences')
-    //         .select('*')
-    //         .order('created_at', { ascending: false })
-
-    //     setExperiences(experiences!);
-    //   }
-
-      //fetchData();
-    }, )
-
+ 
     return (
         <div>
             <h2 className='text-3xl mb-5 font-semibold'>Experience</h2>
