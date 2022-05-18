@@ -6,7 +6,6 @@ const ThemeChanger = () => {
     
     const renderThemeChanger = () => {
         const currentTheme = theme === 'system' ? systemTheme : theme;
-        console.log(currentTheme)
         if (currentTheme === 'light') {
             return (
                 <HiMoon className='w-10 h-10 text-gray-900 transform hover:scale-[1.1] transition-all' role='button' onClick={() => setTheme('dark')} />

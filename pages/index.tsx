@@ -6,8 +6,14 @@ import Hero from '../components/Hero/Hero';
 import Experience from '../components/Experience/Experience';
 import Technologies from '../components/Technologies/Technologies';
 import PersonalProjects from '../components/PersonalProjects/PersonalProjects';
+import { supabase } from '../utils/supabaseClient';
+import ExperienceType from '../types/experience.type';
 
-const Home: NextPage = () => {
+type props = {
+	experiences: ExperienceType[]
+}
+
+const Home: NextPage<props> = ({experiences}) => {
 	return (
 		<div>
 			<Head>
@@ -21,7 +27,7 @@ const Home: NextPage = () => {
 				<div className='flex flex-col justify-center px-8'>
 					<div className='flex flex-col justify-between w-full md:w-1/2 relative max-w-4xl mx-auto pt-8 pb-8 sm:pb-16 bg-opacity-60 space-y-20'>
 						<Hero />
-						<Experience />
+						<Experience experiences={experiences}/>
 						<Technologies />
 						<PersonalProjects />
 					</div>
@@ -31,5 +37,20 @@ const Home: NextPage = () => {
 		</div>
 	)
 }
+
+export async function getServerSideProps() {
+	let { data: experiences } = await supabase
+		.from('experiences')
+		.select('*')
+		.order('created_at', {
+			ascending: false
+		})
+
+	return {
+	  props: {
+		experiences,
+	  },
+	}
+  }
 
 export default Home;

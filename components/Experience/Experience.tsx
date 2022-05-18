@@ -1,24 +1,15 @@
-import { useEffect, useState } from "react";
-import { supabase } from '../../utils/supabaseClient';
+import ExperienceType from "../../types/experience.type";
 
-type Experience = {
-    companyName: string,
-    description: string,
-    position: string,
-    date: string,
-    companyUrl: string,
-    moreInfoActive: boolean
+type experienceProps = {
+    experiences: ExperienceType[]
 }
 
-const Experience = () => {
-    const [experiences, setExperiences] = useState<Experience[]>([])
-
- 
+const Experience : React.FC<experienceProps> = ({ experiences }: experienceProps) => {
     return (
         <div>
             <h2 className='text-3xl mb-5 font-semibold'>Experience</h2>
             <ol className='relative border-l border-gray-400 dark:border-gray-700'>
-                {experiences.map((experience: Experience) => {
+                {experiences.map((experience: ExperienceType) => {
                     return (
                         <li className='mb-10 ml-4' key={experience.companyName}>
                             <div
