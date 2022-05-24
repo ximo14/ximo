@@ -1,17 +1,48 @@
 import ExperienceType from "../../types/experience.type";
 
-type experienceProps = {
-    experiences: ExperienceType[]
-}
+const experiences = [
+    {
+        'companyName': 'Widitrade',
+        'date': 'November 2021 - Present',
+        'position': 'Software Developer',
+        'description': 'Widitrade is a platform that automates visibility and scalability with 100% original content',
+        'companyUrl': 'https://widitrade.com/',
+        'moreInfoActive': false
+    },
+    {
+        'companyName': 'Sopra Steria',
+        'date': 'November 2020 - November 2021',
+        'position': 'Software Developer',
+        'description': 'Sopra Steria is a consulting, digital services, and software development company.',
+        'companyUrl': 'https://www.soprasteria.com/',
+        'moreInfoActive': false
+    },
+    {
+        'companyName': 'Friendly Rentals',
+        'date': 'March 2018 - November 2020',
+        'position': 'Software Developer',
+        'description': 'Friendly Rentals is the leading company in tourism apartments at Barcelona, which have multiple locations around the world.',
+        'companyUrl': 'https://www.friendlyrentals.com/',
+        'moreInfoActive': false
+    },
+    {
+        'companyName': 'Linkener',
+        'date': 'July 2017 - February 2018',
+        'position': 'Intern Developer',
+        'description': 'Linkener is an energetic efficiency start-up that provides software and hardware to improve your electrical consumption.',
+        'companyUrl': 'https://www.linkener.com/',
+        'moreInfoActive': false
+    }
+];
 
-const Experience : React.FC<experienceProps> = ({ experiences }: experienceProps) => {
+const Experience = () => {
     return (
         <div>
             <h2 className='text-3xl mb-5 font-semibold'>Experience</h2>
             <ol className='relative border-l border-gray-400 dark:border-gray-700'>
-                {experiences.map((experience: ExperienceType) => {
+                {experiences.map((experience) => {
                     return (
-                        <li className='mb-10 ml-4' key={experience.id}>
+                        <li className='mb-10 ml-4' key={experience.companyName}>
                             <div
                                 className='absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700'>
                             </div>

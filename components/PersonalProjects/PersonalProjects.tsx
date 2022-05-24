@@ -1,11 +1,17 @@
 import { FiGithub } from 'react-icons/fi';
 import ProjectType from '../../types/project.type';
 
-type props = {
-    projects: ProjectType[]
-}
+const personalProjects = [
+    {
+        'name': 'Rick & Morty Characters',
+        'technologies': 'Vue2, Vuex',
+        'description': 'Little app to learn some of the principal concepts of Vue and Vuex.',
+        'previewUrl': 'https://rick-and-morty-vue2.vercel.app/',
+        'githubUrl': 'https://github.com/ximo14/rick-and-morty.vue2'
+    }
+];
 
-const PersonalProjects : React.FC<props> = ({ projects }: props) => {
+const PersonalProjects = () => {
     return (
         <div>
             <h2 className='text-3xl mb-2 font-semibold'>Projects</h2>
@@ -13,10 +19,10 @@ const PersonalProjects : React.FC<props> = ({ projects }: props) => {
                 Some projects I do for learn and try new technologies.
             </h4>
             <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 mb-10'>
-                {projects.map((project: ProjectType) => {
+                {personalProjects.map((project) => {
                     return(
                         <div className='p-6 max-w-xl md:max-w-sm bg-gray-100 rounded-lg border border-gray-400 shadow-3xl dark:bg-neutral-800 dark:border-stone-700 transform hover:scale-[1.02] transition-all'
-                            key={project.id}>
+                            key={project.name}>
                             <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
                                 {project.name}
                             </h5>
