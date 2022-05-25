@@ -1,5 +1,4 @@
 type ExperienceType = {
-    id: string
     companyName: string,
     description: string,
     position: string,

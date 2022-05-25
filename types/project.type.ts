@@ -1,5 +1,4 @@
 type ProjectType = {
-    id: string
     name: string,
     description: string,
     previewUrl: string,

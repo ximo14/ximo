@@ -1,11 +1,11 @@
 import ExperienceType from "../../types/experience.type";
 
-const experiences = [
+const experiences: ExperienceType[] = [
     {
         'companyName': 'Widitrade',
         'date': 'November 2021 - Present',
         'position': 'Software Developer',
-        'description': 'Widitrade is a platform that automates visibility and scalability with 100% original content',
+        'description': 'Widitrade is a platform that automates visibility and scalability with 100% original content.',
         'companyUrl': 'https://widitrade.com/',
         'moreInfoActive': false
     },

@@ -1,10 +1,9 @@
 import { FiGithub } from 'react-icons/fi';
 import ProjectType from '../../types/project.type';
 
-const personalProjects = [
+const personalProjects: ProjectType[] = [
     {
         'name': 'Rick & Morty Characters',
-        'technologies': 'Vue2, Vuex',
         'description': 'Little app to learn some of the principal concepts of Vue and Vuex.',
         'previewUrl': 'https://rick-and-morty-vue2.vercel.app/',
         'githubUrl': 'https://github.com/ximo14/rick-and-morty.vue2'
